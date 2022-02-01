@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ExhibitStyles</title>
+</head>
+
+<body>
+    <header>
+        <h1>Avgangsutstilling Styles forslag</h1>
+    </header>
+    <section id="main">
+        <script>
+            let pages = [
+                {
+                    title: 'buttons',
+                    img: 'buttons_thumbnail.jpg'
+                },
+                {
+                    title: 'cards',
+                    img: 'buttons_thumbnail.jpg'
+                },
+                {
+                    title: 'header_animation',
+                    img: 'header_animation.png'
+                },
+
+            ]
+
+            document.getElementById('main').innerHTML = pages.map(item =>
+                `<div class="card">
+                    <a href="pages/${item.title}">
+                        <img alt="buttons" src="img/${item.img}" />
+                        <h2>${item.title.charAt(0).toUpperCase() + item.title.slice(1).replace(/_/i, ' ')}</h2>
+                    </a>
+                </div>`
+            ).join('')
+        </script>
+    </section>
+</body>
+
+</html>

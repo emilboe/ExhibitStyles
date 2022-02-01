@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;400&family=Josefin+Sans:wght@200&family=Libre+Baskerville:wght@700&family=Oswald:wght@200;500&family=Outfit:wght@200&family=Roboto+Mono:wght@100;400&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    background: linear-gradient(rgb(192, 192, 192), rgb(255, 255, 255));
+    min-height: 100vh;
+    display: grid;
+}
+header {
+    height: 20rem;
+    background: white;
+    width: 100%;
+    display: grid;
+    text-align: center;
+}
+header h1 {
+    margin: auto;
+    font-family: "Libre Baskerville", serif;
+    font-size: 4rem;
+    background: linear-gradient(to right, rgb(12, 232, 240), rgb(157, 22, 247));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+section {
+    margin: 2rem 4rem;
+    display: grid;
+    gap: 2rem 2rem;
+    grid-auto-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        ". . . ."
+        ". . . .";
+}
+.card {
+    position: relative;
+    background: white;
+    border: 1px solid lightcoral;
+    border-radius: 1rem;
+    padding: 0.2rem;
+    display: grid;
+    font-family: "Be Vietnam Pro", serif;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.card img {
+    margin: 0 auto;
+    border-radius: 1rem;
+    width: 100%;
+}
+.card h2 {
+    padding: 0.8rem;
+    text-decoration: none;
+}
+.card:hover {
+    transform: translate(3px, -3px);
+    box-shadow: -3px 3px 15px rgba(0, 0, 0, 0.3);
+}
