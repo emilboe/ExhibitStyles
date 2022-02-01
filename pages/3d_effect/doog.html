@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doog PIXI.js test</title>
+  <meta name="description" content="PixiJS testing" />
+  <link rel="shortcut icon" type="image/jpg" href="pixie.png" />
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+  <script src="pixi.min.js"></script>
+  <script>
+    let app = new PIXI.Application({ width: window.innerWidth, height: window.innerHeight });
+
+    document.body.appendChild(app.view);
+
+    let doog = new PIXI.Sprite.from("doog.png");
+    app.stage.addChild(doog);
+
+    let doog_depthmap = new PIXI.Sprite.from("doog_depthmap.png");
+    app.stage.addChild(doog_depthmap);
+
+    displacementFilter = new PIXI.filters.DisplacementFilter(doog_depthmap);
+
+    app.stage.filters = [displacementFilter]
+
+    window.onmousemove = (e) => {
+      displacementFilter.scale.x = (window.innerWidth / 2 - e.clientX) / 20
+      displacementFilter.scale.y = (window.innerWidth / 2 - e.clientY) / 20
+    }
+
+  </script>
+  <section id="doog">
+  </section>
+</body>
+
+</html>

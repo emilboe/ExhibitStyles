@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Downey PIXI.js test</title>
+  <meta name="description" content="PixiJS testing" />
+  <link rel="shortcut icon" type="image/jpg" href="pixie.png" />
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+  <section>
+  </section>
+  <script src="pixi.min.js"></script>
+  <script>
+    let app = new PIXI.Application({ width: 1000, height: 1000 });
+    document.body.appendChild(app.view);
+
+    let downey = new PIXI.Sprite.from("downeyjr.png");
+    let downey_depthmap = new PIXI.Sprite.from("downeyjr_depthmap.png");
+    let text = new PIXI.Text("oh wow he's in 3D", { fontFamily: 'Arial', fontSize: 24, fill: 0xffffff, align: 'center' });
+    text.y = 600;
+    text.x = 10;
+
+    app.stage.addChild(downey, downey_depthmap, text);
+
+    displacementFilter = new PIXI.filters.DisplacementFilter(downey_depthmap);
+
+    app.stage.filters = [displacementFilter]
+
+    window.onmousemove = (e) => {
+      displacementFilter.scale.x = (window.innerWidth / 2 - e.clientX) / 30
+      displacementFilter.scale.y = (window.innerWidth / 2 - e.clientY) / 30
+    }
+
+
+  </script>
+</body>
+
+</html>
