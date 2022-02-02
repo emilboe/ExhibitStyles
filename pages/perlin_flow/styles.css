@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;400&family=Josefin+Sans:wght@200&family=Libre+Baskerville:wght@700&family=Oswald:wght@200;500&family=Outfit:wght@200&family=Poiret+One&family=Roboto+Mono:wght@100;400&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: black;
+    display: flex;
+    height: 100%;
+    color: white;
+}
+section {
+    border-radius: 1rem;
+    background-color: rgba(0, 255, 255, 0.1);
+    padding: 2rem;
+    font-family: "Poiret One", cursive;
+    font-size: 2rem;
+    z-index: 2;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem 2rem;
+}
+.grid-item {
+    grid-column: span 2;
+    text-align: center;
+    margin: auto;
+}
+#btn, #btn2 {
+    grid-column: span 3;
+    margin: 2rem 0;
+    padding: 1rem;
+    font-family: "Poiret One", cursive;
+    background: white;
+    border: none;
+    border-radius: 0.5rem;
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+}
+canvas {
+    z-index: -3;
+}
+sup{
+    font-size: 1rem;
+}
+/* Color picker styling  */
+input[type="color"] {
+    opacity: 0;
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+}
+#color-picker-wrapper {
+    width: 5.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid white;
+}
+
+/* number input styling  */
+.quantity {
+    position: relative;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.quantity input {
+    width: 4rem;
+    height: 4rem;
+    line-height: 1.65;
+    float: left;
+    display: block;
+    padding: 0;
+    margin: 0;
+    padding-left: 1.5rem;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+}
+
+.quantity input:focus {
+    outline: 0;
+}
+
+.quantity-nav {
+    float: left;
+    position: relative;
+    height: 4rem;
+}
+
+.quantity-button {
+    position: relative;
+    cursor: pointer;
+    border-left: 1px solid black;
+    width: 2rem;
+    text-align: center;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+    line-height: 2;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.quantity-button.quantity-up {
+    position: absolute;
+    height: 50%;
+    top: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.quantity-button.quantity-down {
+    position: absolute;
+    bottom: -1px;
+    height: 50%;
+}

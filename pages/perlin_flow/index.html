@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="../../img/pixie.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"
+        integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Perlin flow</title>
+
+<body>
+    <section>
+        <div class="grid-item">
+            <p>color</p>
+            <div id="color-picker-wrapper">
+                <input type="color" value="#ff0000" id="color" value="#FF1B72">
+            </div>
+        </div>
+        <div class="grid-item">
+            <p>noise</p>
+            <div class="quantity">
+                <input id="noise"  type="number" min="1" max="9" step="1" value="1">
+            </div>
+        </div>
+        <div class="grid-item">
+            <p>lines<sup>10</sup></p>
+            <div class="quantity">
+                <input id="lines" type="number" min="1" max="10" step="1" value="1">
+            </div>
+        </div>
+        <button id="btn">Update</button>
+        <button id="btn2">Seed</button>
+    </section>
+
+    <script src='scriptj.js'></script>
+</body>
+
+</html>
