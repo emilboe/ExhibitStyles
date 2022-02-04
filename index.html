@@ -14,51 +14,50 @@
     <header>
         <h1>Avgangsutstilling Styles forslag</h1>
     </header>
-    <section id="main">
+    <main id="content">
         <script>
             let pages = [
                 {
                     title: 'header_animation',
                     img: 'header_animation.png',
                     desc: 'scroll så ser du header som blir visible, og en blob lmao',
-                    href:'pages/header_animation'
+                    href: 'pages/header_animation'
                 },
                 {
                     title: '3d_effect',
                     img: 'robert.png',
                     desc: '3d effect bound til mouse movement med PIXI.js',
-                    href:'pages/3d_effect'
+                    href: 'pages/3d_effect'
 
                 },
                 {
                     title: 'Perlin_flow',
                     img: 'perlin.png',
                     desc: 'Perlin flow med P5.js ',
-                    href:'pages/perlin_flow'
+                    href: 'pages/perlin_flow'
 
                 },
                 {
                     title: 'buttons',
                     img: 'buttons_thumbnail.jpg',
                     desc: 'har ikke mekka enda',
-                    href:'pages/buttons'
+                    href: 'pages/buttons'
                 },
                 {
                     title: 'cards',
                     img: 'buttons_thumbnail.jpg',
                     desc: 'ikke lagd as',
-                    href:'pages/cards'
+                    href: 'pages/cards'
                 },
                 {
                     title: 'search',
                     img: 'search.png',
                     desc: 'søkefunksjon, kanskje på student oversikt?',
-                    href:'https://simple-search-firebase.web.app/'
+                    href: 'https://simple-search-firebase.web.app/'
                 },
 
             ]
-
-            document.getElementById('main').innerHTML = pages.map(item =>
+            document.getElementById('content').innerHTML = pages.map(item =>
                 `<div class="card">
                     <a href="${item.href}">
                         <img alt="buttons" src="img/${item.img}" />
@@ -70,7 +69,7 @@
                 </div>`
             ).join('')
         </script>
-    </section>
+    </main>
 </body>
 
 </html>

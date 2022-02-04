@@ -17,43 +17,37 @@ header {
     background: white;
     width: 100%;
     display: grid;
-    text-align: center;
+    place-items: center;
 }
 header h1 {
-    margin: auto;
     font-family: "Libre Baskerville", serif;
     font-size: 4rem;
     background: linear-gradient(to right, rgb(12, 232, 240), rgb(157, 22, 247));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-section {
-    margin: 2rem 4rem;
-    display: grid;
-    gap: 2rem 2rem;
-    grid-auto-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-        ". . . ."
-        ". . . .";
+main {
+    margin: 1rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    justify-content: center;
 }
 .card {
-    position: relative;
     background: white;
-    border: 1px solid lightcoral;
+    /* border: 1px solid lightcoral; */
     border-radius: 1rem;
-    display: grid;
     font-family: "Be Vietnam Pro", serif;
     text-align: center;
-    transition: all 0.3s ease-in-out;
+    transition: transform  0.3s ease-in-out, box-shadow  0.3s ease-in-out;
     overflow: hidden;
+    flex: 0 1 400px;
+    margin: 1rem;
 }
 .card img {
     margin: 0 auto;
     width: 100%;
     height: 60%;
-    user-drag: none;
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
@@ -64,7 +58,7 @@ section {
     padding: 0.8rem;
     text-decoration: none;
 }
-.info{
+.info {
     height: 8rem;
 }
 .card:hover {
