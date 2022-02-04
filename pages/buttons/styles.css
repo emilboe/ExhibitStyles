@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;400&family=Josefin+Sans:wght@200&family=Libre+Baskerville:wght@700&family=Oswald:wght@200;500&family=Outfit:wght@200&family=Poiret+One&family=Roboto+Mono:wght@100;400&family=Roboto:wght@100&display=swap");
+body {
+    background: white;
+    margin: 0 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.item {
+    flex: 1 1 150px;
+    margin: 10px;
+    margin: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item span {
+    padding-top: 1rem;
+    font-family: "Roboto", sans-serif;
+}

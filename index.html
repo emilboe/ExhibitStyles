@@ -20,36 +20,47 @@
                 {
                     title: 'header_animation',
                     img: 'header_animation.png',
-                    desc: 'scroll så ser du header som blir visible, og en blob lmao'
+                    desc: 'scroll så ser du header som blir visible, og en blob lmao',
+                    href:'pages/header_animation'
                 },
                 {
                     title: '3d_effect',
                     img: 'robert.png',
-                    desc: '3d effect bound til mouse movement med PIXI.js'
+                    desc: '3d effect bound til mouse movement med PIXI.js',
+                    href:'pages/3d_effect'
 
                 },
                 {
                     title: 'Perlin_flow',
                     img: 'perlin.png',
-                    desc: 'Perlin flow med P5.js '
+                    desc: 'Perlin flow med P5.js ',
+                    href:'pages/perlin_flow'
 
                 },
                 {
                     title: 'buttons',
                     img: 'buttons_thumbnail.jpg',
-                    desc: 'har ikke mekka enda'
+                    desc: 'har ikke mekka enda',
+                    href:'pages/buttons'
                 },
                 {
                     title: 'cards',
                     img: 'buttons_thumbnail.jpg',
-                    desc: 'ikke lagd as'
+                    desc: 'ikke lagd as',
+                    href:'pages/cards'
+                },
+                {
+                    title: 'search',
+                    img: 'search.png',
+                    desc: 'søkefunksjon, kanskje på student oversikt?',
+                    href:'https://simple-search-firebase.web.app/'
                 },
 
             ]
 
             document.getElementById('main').innerHTML = pages.map(item =>
                 `<div class="card">
-                    <a href="pages/${item.title}">
+                    <a href="${item.href}">
                         <img alt="buttons" src="img/${item.img}" />
                         <div class="info">
                             <h2>${item.title.charAt(0).toUpperCase() + item.title.slice(1).replace(/_/i, ' ')}</h2>
