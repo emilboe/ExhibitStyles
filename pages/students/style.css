@@ -239,9 +239,9 @@ main {
   border-radius: 5rem;
   background-color: #c9d8b5;
   color: #689b4c;
-  margin: 0 .2rem .3rem 0;
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
+  margin: 0 0.2rem 0.3rem 0;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   cursor: pointer;
 }
 
@@ -261,19 +261,116 @@ main {
 
 .versionFour {
   position: relative;
+  height: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid rgba(250, 235, 215, 0);
+  padding: 2rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.versionFour:hover {
+  border: 2px solid antiquewhite;
+  height: 27rem;
+}
+
+.versionFour:hover .info {
+  opacity: 100%;
+  position: relative;
+  margin-top: 0;
+}
+
+.versionFour .info {
+  margin-top: -4rem;
+  opacity: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.versionFour button {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 5rem;
+  background-color: #c9d8b5;
+  color: #689b4c;
+  margin: 0 0.2rem 0.3rem 0;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   cursor: pointer;
 }
 
+.versionFour button:hover {
+  background-color: #a8b695;
+  color: #3d741f;
+}
+
 .versionFour .pfpContainer {
+  z-index: 2;
+  height: 18rem;
+  width: 18rem;
+}
+
+.versionFour .pfpContainer .pfp {
+  cursor: pointer;
+  height: 18rem;
+}
+
+.versionFive {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.versionFive h2 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.versionFive .pfpContainer {
+  z-index: 2;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.versionFive .pfpContainer .pfp {
+  height: 12rem;
+}
+
+.versionHover {
+  position: relative;
+  cursor: pointer;
+}
+
+.versionHover .pfpContainer {
   height: 15rem;
   width: 15rem;
 }
 
-.versionFour .pfpContainer .pfp {
+.versionHover .pfpContainer .pfp {
   height: 15rem;
 }
 
-.versionFour .pfpContainer .filter {
+.versionHover .pfpContainer .filter {
   height: 100%;
   width: 100%;
   -webkit-backdrop-filter: grayscale(100%);
@@ -284,7 +381,7 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
-.versionFour .pfpContainer .filter:hover {
+.versionHover .pfpContainer .filter:hover {
   -webkit-backdrop-filter: grayscale(0%);
           backdrop-filter: grayscale(0%);
 }
