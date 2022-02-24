@@ -1,0 +1,122 @@
+$dark: rgb(60, 60, 60);
+$lightgreen: rgb(24, 148, 24);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: floralwhite;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    color: $dark;
+}
+
+header {
+    width: 90%;
+    margin: 2rem auto;
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    font-size: 2rem;
+}
+h1 {
+    font-family: ohno-blazeface, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+.logo > span {
+    margin: -5px;
+}
+.utstilling {
+    color: green;
+}
+.num {
+    font-family: ohno-blazeface, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    align-self: end;
+}
+.back {
+    text-decoration: none;
+    color: $dark;
+    &:hover {
+        color: $lightgreen;
+    }
+}
+main {
+    width: 80%;
+    margin: auto;
+}
+.studentlist {
+    margin-top: 3rem;
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+.studentOne {
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 25rem;
+    text-align: center;
+    overflow: hidden;
+
+    .cardContainer {
+        width: 100%;
+        height: 8rem;
+        overflow: hidden;
+    }
+    .cardBg {
+        width: 100%;
+        margin-top: -5rem;
+    }
+    .pfpContainer {
+        height: 9rem;
+        width: 9rem;
+        margin: -6rem auto;
+        border-radius: 50%;
+        background-color: aliceblue;
+        overflow: hidden;
+        display: grid;
+        justify-content: center;
+    }
+    .pfp {
+        margin-top: -2rem;
+        height: 18rem;
+    }
+    h2 {
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            color: blue;
+        }
+    }
+    .info {
+        margin-top: 7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    button {
+        border: none;
+        width: 70%;
+        background-color: $lightgreen;
+        color: white;
+        padding: 0.5rem 2rem;
+        border-radius: 1rem;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        margin: 1rem;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+}

@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: floralwhite;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: #3c3c3c;
+}
+
+header {
+  width: 90%;
+  margin: 2rem auto;
+  /* background-color: antiquewhite; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2rem;
+  font-size: 2rem;
+}
+
+h1 {
+  font-family: ohno-blazeface, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-transform: uppercase;
+}
+
+.logo > span {
+  margin: -5px;
+}
+
+.utstilling {
+  color: green;
+}
+
+.num {
+  font-family: ohno-blazeface, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.back {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+
+.back:hover {
+  color: #189418;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}
+
+.studentlist {
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.studentOne {
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 25rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.studentOne .cardContainer {
+  width: 100%;
+  height: 8rem;
+  overflow: hidden;
+}
+
+.studentOne .cardBg {
+  width: 100%;
+  margin-top: -5rem;
+}
+
+.studentOne .pfpContainer {
+  height: 9rem;
+  width: 9rem;
+  margin: -6rem auto;
+  border-radius: 50%;
+  background-color: aliceblue;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.studentOne .pfp {
+  margin-top: -2rem;
+  height: 18rem;
+}
+
+.studentOne h2 {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.studentOne h2:hover {
+  cursor: pointer;
+  color: blue;
+}
+
+.studentOne .info {
+  margin-top: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.studentOne button {
+  border: none;
+  width: 70%;
+  background-color: #189418;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  margin: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/*# sourceMappingURL=style.css.map */
