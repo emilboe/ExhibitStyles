@@ -56,15 +56,15 @@ main {
     margin: auto;
 }
 .studentlist {
-    margin-top: 3rem;
+    margin: 3rem 0;
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
     flex-wrap: wrap;
 }
-.studentOne {
+.versionOne {
     background-color: white;
     border-radius: 0.5rem;
-    width: 25rem;
+    width: 22rem;
     text-align: center;
     overflow: hidden;
 
@@ -86,17 +86,29 @@ main {
         overflow: hidden;
         display: grid;
         justify-content: center;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            height: 10rem;
+            width: 10rem;
+            margin-top: -7rem;
+            cursor: pointer;
+            .pfp {
+                height: 12rem;
+                margin-top: -0.5rem;
+            }
+        }
     }
     .pfp {
-        margin-top: -2rem;
-        height: 18rem;
+        height: 10rem;
+        transition: all 0.2s ease-in-out;
     }
     h2 {
         transition: all 0.1s ease-in-out;
 
         &:hover {
             cursor: pointer;
-            color: blue;
+            color: $lightgreen;
         }
     }
     .info {
@@ -105,6 +117,10 @@ main {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+    }
+    .notes {
+        display: flex;
+        gap: 0.8rem;
     }
     button {
         border: none;
@@ -117,6 +133,84 @@ main {
         font-weight: 500;
         margin: 1rem;
         cursor: pointer;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.1s ease-in-out;
+        &:hover {
+            background-color: rgb(12, 110, 12);
+        }
+    }
+}
+.versionTwo {
+    position: relative;
+    margin-bottom: 1rem;
+    .pfpContainer {
+        height: 15rem;
+        width: 15rem;
+        .pfp {
+            height: 15rem;
+        }
+        .filter {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+    }
+}
+.versionThree {
+    position: relative;
+    height: 27rem;
+    border: 2px solid antiquewhite;
+    padding: 3rem;
+    display: flex;
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    button {
+
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        border: none;
+        padding: 0.5rem 2rem;
+        border-radius: 5rem;
+        background-color: #c9d8b5;
+        color: #689b4c;
+        margin: 0 .2rem .3rem 0;
+        transition: all .1s ease-in-out;
+        cursor: pointer;
+        &:hover{
+            background-color: #a8b695;
+            color: #3d741f;
+        }
+    }
+    .pfpContainer {
+        height: 18rem;
+        width: 18rem;
+        .pfp {
+            height: 18rem;
+        }
+    }
+}
+.versionFour {
+    position: relative;
+    cursor: pointer;
+    .pfpContainer {
+        height: 15rem;
+        width: 15rem;
+        .pfp {
+            height: 15rem;
+        }
+        .filter {
+            height: 100%;
+            width: 100%;
+            backdrop-filter: grayscale(100%);
+            position: absolute;
+            top: 0;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                backdrop-filter: grayscale(0%);
+            }
+        }
     }
 }

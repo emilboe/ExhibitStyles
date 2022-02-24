@@ -19,40 +19,91 @@
             <span class="num">2022</span>
         </div>
     </header>
-    <main>
-        <h1>Grafisk design</h1>
-        <div class="studentlist">
-            <div class="studentOne">
+    <main id="main">
+
+        <h1>Linkedin style</h1>
+        <div class="studentlist" id="first"></div>
+        <script>
+            let output = document.getElementById('first')
+            for (i = 1; i < 6; i++) {
+                output.innerHTML += `
+            <div class="versionOne">
                 <div class="cardContainer">
                     <img class="cardBg" src="pfp/deck1.webp" />
                 </div>
-
                 <div class="pfpContainer">
-                    <img class="pfp" src="pfp/studentone.jpg" />
+                    <img class="pfp" src="pfp/student${i}.png" />
                 </div>
                 <div class="info">
-                    <h2><a>Simen johansen</a></h2>
-                    <p>Nysgjerrig • kvalitetsbevisst • positiv</p>
-                    <p>#UU #Usability #Brukerflyt</p>
+                    <h2><a>Navn Navnesen</a></h2>
+                    <p class="notes"><span>Nysgjerrig</span><span>•</span><span>kvalitetsbevisst</span><span>•</span><span>positiv</span></p>
+                    <p class="notes"><span>#UU</span><span>#Usability</span><span>#Brukerflyt</span></p>
                     <button>Se arbeid</button>
                 </div>
             </div>
-            <div class="studentOne">
-                <div class="cardContainer">
-                    <img class="cardBg" src="pfp/deck1.webp" />
-                </div>
+                `
+            }
+        </script>
 
-                <div class="pfpContainer">
-                    <img class="pfp" src="pfp/studentone.jpg" />
-                </div>
-                <div class="info">
-                    <h2><a>Simen johansen</a></h2>
-                    <p>Nysgjerrig • kvalitetsbevisst • positiv</p>
-                    <p>#UU #Usability #Brukerflyt</p>
-                    <button>Se arbeid</button>
+        <h1>Basic</h1>
+        <div class="studentlist" id="second"></div>
+        <script>
+            output = document.getElementById('second')
+            for (i = 1; i < 6; i++) {
+                output.innerHTML += `
+        <div class="versionTwo">
+            <div class="pfpContainer">
+                <img class="pfp" src="pfp/student${i}.png" />
+            <div class="filter"></div>
+                <h2>Navn Navnesen</h2>
+            </div>
+        </div>
+        `
+            }
+        </script>
+
+        <h1>Basic v2</h1>
+        <div class="studentlist" id="third"></div>
+        <script>
+            output = document.getElementById('third')
+            for (i = 1; i < 6; i++) {
+                output.innerHTML += `
+        <div class="versionThree">
+            <div class="pfpContainer">
+                <img class="pfp" src="pfp/student${i}.png" />
+            <div class="info">
+                <h2>Navn Navnesen</h2>
+                <p>lorem ipsum doler sit amet</p>
+                <div class="buttons">
+                    <button>Lorem tags</button>
+                    <button>Tags</button>
+                    <button>Tags</button>
                 </div>
             </div>
         </div>
+        `
+            }
+        </script>
+
+        <h1>Hover color</h1>
+        <h2>Doesn't work in firefox 😞</h2>
+        <div class="studentlist" id="fourth"></div>
+        <script>
+            output = document.getElementById('fourth')
+            for (i = 1; i < 6; i++) {
+                output.innerHTML += `
+        <div class="versionFour">
+            <div class="pfpContainer">
+                <img class="pfp" src="pfp/student${i}.png" />
+            <div class="filter"></div>
+            </div>
+        </div>
+        `
+            }
+        </script>
+
+
+
     </main>
 </body>
 

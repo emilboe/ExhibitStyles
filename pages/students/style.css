@@ -76,35 +76,35 @@ main {
 }
 
 .studentlist {
-  margin-top: 3rem;
+  margin: 3rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.studentOne {
+.versionOne {
   background-color: white;
   border-radius: 0.5rem;
-  width: 25rem;
+  width: 22rem;
   text-align: center;
   overflow: hidden;
 }
 
-.studentOne .cardContainer {
+.versionOne .cardContainer {
   width: 100%;
   height: 8rem;
   overflow: hidden;
 }
 
-.studentOne .cardBg {
+.versionOne .cardBg {
   width: 100%;
   margin-top: -5rem;
 }
 
-.studentOne .pfpContainer {
+.versionOne .pfpContainer {
   height: 9rem;
   width: 9rem;
   margin: -6rem auto;
@@ -116,24 +116,39 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.studentOne .pfp {
-  margin-top: -2rem;
-  height: 18rem;
+.versionOne .pfpContainer:hover {
+  height: 10rem;
+  width: 10rem;
+  margin-top: -7rem;
+  cursor: pointer;
 }
 
-.studentOne h2 {
+.versionOne .pfpContainer:hover .pfp {
+  height: 12rem;
+  margin-top: -0.5rem;
+}
+
+.versionOne .pfp {
+  height: 10rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.versionOne h2 {
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
 
-.studentOne h2:hover {
+.versionOne h2:hover {
   cursor: pointer;
-  color: blue;
+  color: #189418;
 }
 
-.studentOne .info {
+.versionOne .info {
   margin-top: 7rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,7 +163,14 @@ main {
   gap: 1rem;
 }
 
-.studentOne button {
+.versionOne .notes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.versionOne button {
   border: none;
   width: 70%;
   background-color: #189418;
@@ -159,7 +181,111 @@ main {
   font-weight: 500;
   margin: 1rem;
   cursor: pointer;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.versionOne button:hover {
+  background-color: #0c6e0c;
+}
+
+.versionTwo {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.versionTwo .pfpContainer {
+  height: 15rem;
+  width: 15rem;
+}
+
+.versionTwo .pfpContainer .pfp {
+  height: 15rem;
+}
+
+.versionTwo .pfpContainer .filter {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.versionThree {
+  position: relative;
+  height: 27rem;
+  border: 2px solid antiquewhite;
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.versionThree .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.versionThree button {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 5rem;
+  background-color: #c9d8b5;
+  color: #689b4c;
+  margin: 0 .2rem .3rem 0;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  cursor: pointer;
+}
+
+.versionThree button:hover {
+  background-color: #a8b695;
+  color: #3d741f;
+}
+
+.versionThree .pfpContainer {
+  height: 18rem;
+  width: 18rem;
+}
+
+.versionThree .pfpContainer .pfp {
+  height: 18rem;
+}
+
+.versionFour {
+  position: relative;
+  cursor: pointer;
+}
+
+.versionFour .pfpContainer {
+  height: 15rem;
+  width: 15rem;
+}
+
+.versionFour .pfpContainer .pfp {
+  height: 15rem;
+}
+
+.versionFour .pfpContainer .filter {
+  height: 100%;
+  width: 100%;
+  -webkit-backdrop-filter: grayscale(100%);
+          backdrop-filter: grayscale(100%);
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.versionFour .pfpContainer .filter:hover {
+  -webkit-backdrop-filter: grayscale(0%);
+          backdrop-filter: grayscale(0%);
 }
 /*# sourceMappingURL=style.css.map */
