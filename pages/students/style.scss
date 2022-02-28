@@ -30,12 +30,10 @@ header {
     font-size: 2rem;
 }
 h2 {
-    font-family: "ohno-blazeface", sans-serif;
-    font-weight: 400;
+    font-size: 2rem;
 }
-
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 .logo {
     text-transform: uppercase;
@@ -291,6 +289,53 @@ main {
         overflow: hidden;
         .pfp {
             height: 12rem;
+        }
+    }
+}
+
+.versionSix {
+    position: relative;
+    gap: 1rem;
+    display: flex;
+    h3 {
+        opacity: 0%;
+        cursor: pointer;
+        font-size: 2rem;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-40%, -50%);
+        z-index: 2;
+        transition: all 0.2s ease-in-out;
+        color: $lime;
+        text-shadow: 1px 1px $ash;
+    }
+    &:hover h3 {
+        opacity: 100%;
+        transform: translate(-50%, -50%);
+    }
+    h2 {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .pfpContainer {
+        height: 15rem;
+        width: 15rem;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+        .pfp {
+            height: 15rem;
+        }
+
+        .filter {
+            height: 100%;
+            width: 100%;
+            backdrop-filter: grayscale(100%);
+            position: absolute;
+            top: 0;
+            transition: all 0.3s ease-in-out;
         }
     }
 }

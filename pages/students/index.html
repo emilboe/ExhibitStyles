@@ -24,6 +24,13 @@
         <h2>Linkedin style</h2>
         <div class="studentlist" id="first"></div>
         <script>
+            let studentNames = [
+                "Gal Gadot",
+                "Rina Sawayama",
+                "Christopher McKay",
+                "Ryan Gosling",
+                "Ruth Langmore"
+            ]
             let output = document.getElementById('first')
             for (i = 1; i < 6; i++) {
                 output.innerHTML += `
@@ -35,7 +42,7 @@
                     <img class="pfp" src="pfp/student${i}.png" />
                 </div>
                 <div class="info">
-                    <h3><a>Navn Navnesen</a></h3>
+                    <h3><a>${studentNames[i-1]}</a></h3>
                     <p class="notes"><span>Nysgjerrig</span><span>•</span><span>kvalitetsbevisst</span><span>•</span><span>positiv</span></p>
                     <p class="notes"><span>#UU</span><span>#Usability</span><span>#Brukerflyt</span></p>
                     <button>Se arbeid</button>
@@ -45,7 +52,7 @@
             }
         </script>
 
-        <h1>Basic</h1>
+        <h2>Basic</h2>
         <div class="studentlist" id="second"></div>
         <script>
             output = document.getElementById('second')
@@ -55,7 +62,7 @@
             <div class="pfpContainer">
                 <img class="pfp" src="pfp/student${i}.png" />
             <div class="filter"></div>
-                <h3>Navn Navnesen</h3>
+                <h3>${studentNames[i-1]}</h3>
             </div>
         </div>
         `
@@ -63,8 +70,8 @@
         </script>
 
 
-        <h1>Hover color</h1>
-        <h2>Doesn't work in firefox 😞</h2>
+        <h2>Hover color</h2>
+        <p>Doesn't work in firefox 😞</p>
         <div class="studentlist" id="hover"></div>
         <script>
             output = document.getElementById('hover')
@@ -80,7 +87,7 @@
             }
         </script>
 
-        <h1>Basic v2</h1>
+        <h2>Basic v2</h2>
         <div class="studentlist" id="third"></div>
         <script>
             output = document.getElementById('third')
@@ -90,7 +97,7 @@
             <div class="pfpContainer">
                 <img class="pfp" src="pfp/student${i}.png" />
             <div class="info">
-                <h3>Navn Navnesen</h3>
+                <h3>${studentNames[i-1]}</h3>
                 <p>lorem ipsum doler sit amet</p>
                 <div class="buttons">
                     <button>Lorem tags</button>
@@ -103,7 +110,7 @@
             }
         </script>
 
-        <h2>Basic v2 but hover animation</h2>
+        <h2>Basic v2 (with hover animation)</h2>
         <div class="studentlist" id="fourth"></div>
         <script>
             output = document.getElementById('fourth')
@@ -114,7 +121,7 @@
                 <img class="pfp" src="pfp/student${i}.png" />
             </div>
             <div class="info">
-                <h3>Navn Navnesen</h3>
+                <h3>${studentNames[i-1]}</h3>
                 <p>lorem ipsum doler sit amet</p>
                 <div class="buttons">
                     <button>Lorem tags</button>
@@ -129,7 +136,7 @@
 
 
         <h2>Cramped version</h2>
-        <h2>good for showing a lot of students quickly</h2>
+        <p>good for showing a lot of students quickly</p>
         <div class="studentlist" id="fifth"></div>
         <script>
             output = document.getElementById('fifth')
@@ -139,7 +146,27 @@
             <div class="pfpContainer">
                 <img class="pfp" src="pfp/student${Math.round(i / 2)}.png" />
             </div>
-                <h3>Navn Navnesen</h3>
+                <h3>${studentNames[Math.round(i / 2)-1]}</h3>
+        </div>
+        `
+            }
+        </script>
+
+        <h2>Cramped version (hover anim whoo)</h2>
+        <p>good for showing a lot of students quickly</p>
+        <div class="studentlist" id="sixth"></div>
+        <script>
+            output = document.getElementById('sixth')
+            for (i = 1; i < 11; i++) {
+                if (i > 5) j = Math.round(i - 5)
+                else j = i
+                output.innerHTML += `
+        <div class="versionSix">
+            <div class="pfpContainer">
+                <img class="pfp" src="pfp/student${j}.png" />
+            <div class="filter"></div>
+            </div>
+                <h3>${studentNames[j-1]}</h3>
         </div>
         `
             }
