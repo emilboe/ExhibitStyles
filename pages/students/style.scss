@@ -1,15 +1,22 @@
-$dark: rgb(60, 60, 60);
-$lightgreen: rgb(24, 148, 24);
+$ash: rgb(60, 60, 60);
+$lime: rgb(41, 154, 56);
+$milk: rgb(255, 249, 237);
+
+@font-face {
+    font-family: "Helvetica Neue";
+    font-weight: medium;
+    src: url("fonts/HelveticaNeue-Medium.otf");
+}
 
 * {
     margin: 0;
     padding: 0;
 }
 body {
-    background-color: floralwhite;
+    background-color: $milk;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    color: $dark;
+    font-weight: medium;
+    color: $ash;
 }
 
 header {
@@ -22,33 +29,48 @@ header {
     gap: 2rem;
     font-size: 2rem;
 }
-h1 {
-    font-family: ohno-blazeface, sans-serif;
+h2 {
+    font-family: "ohno-blazeface", sans-serif;
     font-weight: 400;
-    font-style: normal;
 }
 .logo {
-    display: flex;
-    flex-direction: column;
     text-transform: uppercase;
+    text-align: right;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 2rem;
 }
-.logo > span {
-    margin: -5px;
+#logo1::after {
+    content: "-";
+    white-space: pre;
+}
+#logo2::before {
+    content: "\a";
+    white-space: pre;
+}
+#logo2::after {
+    content: "\a";
+    white-space: pre;
+}
+#hiddenspace {
+    font-size: 0.1px;
+}
+#logo3 {
+    text-align: right;
 }
 .utstilling {
-    color: green;
+    color: $lime;
 }
 .num {
     font-family: ohno-blazeface, sans-serif;
     font-weight: 400;
     font-style: normal;
-    align-self: end;
 }
 .back {
     text-decoration: none;
-    color: $dark;
+    color: $ash;
     &:hover {
-        color: $lightgreen;
+        color: $lime;
     }
 }
 main {
@@ -82,7 +104,6 @@ main {
         width: 9rem;
         margin: -6rem auto;
         border-radius: 50%;
-        background-color: aliceblue;
         overflow: hidden;
         display: grid;
         justify-content: center;
@@ -108,7 +129,7 @@ main {
 
         &:hover {
             cursor: pointer;
-            color: $lightgreen;
+            color: $lime;
         }
     }
     .info {
@@ -125,7 +146,7 @@ main {
     button {
         border: none;
         width: 70%;
-        background-color: $lightgreen;
+        background-color: $lime;
         color: white;
         padding: 0.5rem 2rem;
         border-radius: 1rem;
@@ -196,6 +217,9 @@ main {
     position: relative;
     height: 20rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     border: 2px solid rgba(250, 235, 215, 0);
     padding: 2rem;
     transition: all 0.2s ease-in-out;
@@ -210,7 +234,9 @@ main {
     }
     .info {
         margin-top: -4rem;
+        z-index: -999;
         opacity: 0%;
+        width: 80%;
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -237,17 +263,19 @@ main {
         height: 18rem;
         width: 18rem;
         .pfp {
+            z-index: 2;
             cursor: pointer;
             height: 18rem;
         }
     }
 }
+
 .versionFive {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    h2{
+    h2 {
         text-align: center;
         font-size: 1.2rem;
     }

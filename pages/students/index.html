@@ -13,15 +13,15 @@
 <body>
     <header>
         <a href="/../" class="back"> ← </a>
-        <div class="logo">
-            <span>Avgangs-</span>
-            <span class="utstilling">utstilling</span>
-            <span class="num">2022</span>
-        </div>
+        <h1 class="logo">
+            <span id="logo1">Avgangs</span><span class="utstilling" id="logo2">utstilling</span>
+            <span id="hiddenspace">&nbsp;</span>
+            <span class="num" id="logo3">2022</span>
+        </h1>
     </header>
     <main id="main">
 
-        <h1>Linkedin style</h1>
+        <h2>Linkedin style</h2>
         <div class="studentlist" id="first"></div>
         <script>
             let output = document.getElementById('first')
@@ -62,6 +62,24 @@
             }
         </script>
 
+
+        <h1>Hover color</h1>
+        <h2>Doesn't work in firefox 😞</h2>
+        <div class="studentlist" id="hover"></div>
+        <script>
+            output = document.getElementById('hover')
+            for (i = 1; i < 6; i++) {
+                output.innerHTML += `
+        <div class="versionHover">
+            <div class="pfpContainer">
+                <img class="pfp" src="pfp/student${i}.png" />
+            <div class="filter"></div>
+            </div>
+        </div>
+        `
+            }
+        </script>
+
         <h1>Basic v2</h1>
         <div class="studentlist" id="third"></div>
         <script>
@@ -94,6 +112,7 @@
         <div class="versionFour">
             <div class="pfpContainer">
                 <img class="pfp" src="pfp/student${i}.png" />
+            </div>
             <div class="info">
                 <h2>Navn Navnesen</h2>
                 <p>lorem ipsum doler sit amet</p>
@@ -118,7 +137,7 @@
                 output.innerHTML += `
         <div class="versionFive">
             <div class="pfpContainer">
-                <img class="pfp" src="pfp/student${Math.round(i/2)}.png" />
+                <img class="pfp" src="pfp/student${Math.round(i / 2)}.png" />
             </div>
                 <h2>Navn Navnesen</h2>
         </div>
@@ -126,22 +145,6 @@
             }
         </script>
 
-        <h1>Hover color</h1>
-        <h2>Doesn't work in firefox 😞</h2>
-        <div class="studentlist" id="hover"></div>
-        <script>
-            output = document.getElementById('hover')
-            for (i = 1; i < 6; i++) {
-                output.innerHTML += `
-        <div class="versionHover">
-            <div class="pfpContainer">
-                <img class="pfp" src="pfp/student${i}.png" />
-            <div class="filter"></div>
-            </div>
-        </div>
-        `
-            }
-        </script>
 
 
 

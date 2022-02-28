@@ -1,12 +1,18 @@
+@font-face {
+  font-family: "Helvetica Neue";
+  font-weight: medium;
+  src: url("fonts/HelveticaNeue-Medium.otf");
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: floralwhite;
+  background-color: #fff9ed;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: medium;
   color: #3c3c3c;
 }
 
@@ -27,38 +33,50 @@ header {
   font-size: 2rem;
 }
 
-h1 {
-  font-family: ohno-blazeface, sans-serif;
+h2 {
+  font-family: "ohno-blazeface", sans-serif;
   font-weight: 400;
-  font-style: normal;
 }
 
 .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   text-transform: uppercase;
+  text-align: right;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 2rem;
 }
 
-.logo > span {
-  margin: -5px;
+#logo1::after {
+  content: "-";
+  white-space: pre;
+}
+
+#logo2::before {
+  content: "\a";
+  white-space: pre;
+}
+
+#logo2::after {
+  content: "\a";
+  white-space: pre;
+}
+
+#hiddenspace {
+  font-size: 0.1px;
+}
+
+#logo3 {
+  text-align: right;
 }
 
 .utstilling {
-  color: green;
+  color: #299a38;
 }
 
 .num {
   font-family: ohno-blazeface, sans-serif;
   font-weight: 400;
   font-style: normal;
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
 }
 
 .back {
@@ -67,7 +85,7 @@ h1 {
 }
 
 .back:hover {
-  color: #189418;
+  color: #299a38;
 }
 
 main {
@@ -109,7 +127,6 @@ main {
   width: 9rem;
   margin: -6rem auto;
   border-radius: 50%;
-  background-color: aliceblue;
   overflow: hidden;
   display: -ms-grid;
   display: grid;
@@ -145,7 +162,7 @@ main {
 
 .versionOne h2:hover {
   cursor: pointer;
-  color: #189418;
+  color: #299a38;
 }
 
 .versionOne .info {
@@ -173,7 +190,7 @@ main {
 .versionOne button {
   border: none;
   width: 70%;
-  background-color: #189418;
+  background-color: #299a38;
   color: white;
   padding: 0.5rem 2rem;
   border-radius: 1rem;
@@ -265,6 +282,14 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
   border: 2px solid rgba(250, 235, 215, 0);
   padding: 2rem;
   -webkit-transition: all 0.2s ease-in-out;
@@ -284,7 +309,9 @@ main {
 
 .versionFour .info {
   margin-top: -4rem;
+  z-index: -999;
   opacity: 0%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -323,6 +350,7 @@ main {
 }
 
 .versionFour .pfpContainer .pfp {
+  z-index: 2;
   cursor: pointer;
   height: 18rem;
 }
